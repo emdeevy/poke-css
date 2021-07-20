@@ -1,33 +1,172 @@
-.outside-poke-card-wrapper { position: relative;width: 330px; }
+
 
 .poke-card { position:relative;width:330px;height:400px;border-radius: 2px;overflow: hidden; }
-.poke-card-border { position:absolute;top:0;bottom:0;left:0;right:0;z-index: 2;-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none; }
-.poke-card-img { position: absolute;top:0;left:0;width:330px;height:400px;border: 1px solid rgba(0, 0, 0, .3);border-bottom-width: 2px;border-radius: 2px;z-index: 1;-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none; }
-.poke-card-content { position: relative;height:100%;width:100%;z-index: 3; }
+.poke-card-border { position: absolute;top:0;left:0;right:0;bottom:0;border:1px solid rgba(0, 0, 0, .5);border-radius: 2px;border-bottom-width: 2px;z-index: 10;pointer-events: none; }
+.poke-card-border-green { border-color: #6BA32D; }
+.card-profile-picture-container { position: absolute; top:0;right:0;bottom:0;left:0;border-radius:2px; overflow: hidden;z-index: 5; }
+.card-profile-picture-container-crop { position: absolute; top:0;right:0;bottom:0;left:0;border-radius:2px; overflow: hidden;z-index: 7; }
+.poke-card-img { will-change: transform;text-align: left; }
 
-.poke-card-login-container { position: relative;height: 100%;width:100%; }
-.poke-card-login-input-wrapper { position:relative;display: block;width:100%; }
 
-.poke-card-input-d { position:relative;display: block; }
-.poke-card-input { position: relative;border-radius: 2px;border:1px solid rgba(0, 0, 0, .3);background:rgba(0, 0, 0, .1);width:100%;outline: none;padding:.15em .5em; }
-.poke-card-input-email { border-radius: 2px 2px 0 0;margin-bottom:-1px; }
-.flactive { border-radius: 0; }
-.poke-card-input-firstname{ border-radius: 2px 0 0 0;margin-bottom:-1px;width: 50%; }
-.poke-card-input-lastname{ border-radius: 0 2px 0 0;margin-bottom:-1px;width: calc(50% + 1px);margin-left:-1px; }
-.poke-card-input-password { border-radius: 0 0 2px 2px;border-bottom-width: 2px; }
-.poke-card-input:hover { position:relative;background:rgba(0, 0, 0, .15);border-color:rgba(0, 0, 0, .4); }
-.poke-card-input:focus { position:relative;background:rgba(0, 0, 0, .2);border-color:rgba(0, 0, 0, .5); }
+.inside-login-container { position: relative;height:100%;width:100%;cursor:pointer; }
+.login-form { position: relative;display: block;height:100%;width:100%; z-index: 6; }
+.login-inputs-aligner { position:relative;height:100%;width:100%; }
+.login-inputs-wrapper { position: relative;width: 100%; }
 
-.poke-card-input-email-real { position: absolute;visibility: hidden; }
-.poke-card-input-password-real { position: absolute;visibility: hidden; }
+.login-input-wrapper { position: relative; width: 100%; }
+.login-email-input-wrapper { position: relative;margin-bottom:-1px; }
+.login-password-input-wrapper { position: relative; }
 
-.login-submit-button { position:relative;width:100%; background: rgba(0, 0, 0, .1);border-radius: 2px 2px 0 0;border:1px solid rgba(0, 0, 0, .3); margin-bottom:-1px;padding:.15em 0;cursor: pointer;-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none; }
-.login-submit-button:hover { background: rgba(0, 0, 0, .15);border-color: rgba(0, 0, 0, .4); }
-.login-submit-button:active { background: rgba(0, 0, 0, .2);border-color: rgba(0, 0, 0, .5); }
-.register-submit-button { position:relative;width:100%; background: rgba(0, 0, 0, .1);border-radius:0 0 2px 2px;border:1px solid rgba(0, 0, 0, .3); margin-bottom:-1px;padding:.15em 0;border-bottom-width: 2px;cursor: pointer;-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none; }
-.register-submit-button:hover { background: rgba(0, 0, 0, .15);border-color: rgba(0, 0, 0, .4); }
-.register-submit-button:active { background: rgba(0, 0, 0, .2);border-color: rgba(0, 0, 0, .5); }
+.login-invisible-input-wrapper { position: absolute;visibility: hidden; }
 
-.login-profile-picture-button { position:relative;width:100%; background: rgba(0, 0, 0, .1);border-radius: 2px;border:1px solid rgba(0, 0, 0, .3); padding:.15em 0;cursor: pointer;-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none; }
-.login-profile-picture-button:hover { background: rgba(0, 0, 0, .15);border-color: rgba(0, 0, 0, .4); }
-.login-profile-picture-button:active { background: rgba(0, 0, 0, .2);border-color: rgba(0, 0, 0, .5); }
+.login-text-input { position: relative;width:100%;border-radius: 2px;border:1px solid rgba(0, 0, 0, .5);background:rgba(0, 0, 0, .1);outline: none;padding:.15em .5em; }
+.login-text-input:hover { position:relative;background:rgba(0, 0, 0, .2);border-color:rgba(0, 0, 0, .6); }
+.login-text-input:focus { position:relative;background:rgba(0, 0, 0, .3);border-color:rgba(0, 0, 0, .7); }
+.login-email-input { position: relative;border-radius: 2px 2px 0 0; }
+.login-password-input { position: relative;border-radius: 0 0 2px 2px; }
+
+.login-submit-input { position: relative;width:100%;border-radius: 2px;border:1px solid rgba(0, 0, 0, .5);background:rgba(0, 0, 0, .1);outline: none;padding:.15em .5em;color:black;border-bottom-width: 2px;cursor: pointer;-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none; }
+.login-submit-input:hover { background: rgba(0, 0, 0, .2);border-color: rgba(0, 0, 0, .6); }
+.login-submit-input:active { background: rgba(0, 0, 0, .3);border-color: rgba(0, 0, 0, .7); }
+
+.poke-swap-button { position: relative;width:100%;border-radius: 2px;border:1px solid rgba(0, 0, 0, .5);background:rgba(0, 0, 0, .1);outline: none;padding:.15em .5em;color:black;border-bottom-width: 2px;cursor: pointer;-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none; text-align: center; }
+.poke-swap-button:hover { background: rgba(0, 0, 0, .2);border-color: rgba(0, 0, 0, .6); }
+.poke-swap-button:active { background: rgba(0, 0, 0, .3);border-color: rgba(0, 0, 0, .7); }
+
+.inside-register-container { position: relative;height:100%;width:100%; }
+.register-form { position: relative;display: block;height:100%;width:100%; z-index: 6; }
+.register-top-inputs-aligner { position:relative;height:50%;width:100%; }
+.register-bottom-inputs-aligner { position:relative;height:50%;width:100%; }
+.register-inputs-wrapper { position: relative;width: 100%; }
+
+.register-input-wrapper { position: relative; width: 100%; }
+.register-name-input-wrapper { position: relative;width:100%;margin-bottom:-1px; }
+.register-email-input-wrapper { position: relative; }
+.register-password-input-wrapper { position: relative;margin-bottom:-1px; }
+.register-password2-input-wrapper { position: relative; }
+
+.register-invisible-input-wrapper { position: absolute;visibility: hidden; }
+
+.register-text-input { position: relative;width:100%;border-radius: 2px;border:1px solid rgba(0, 0, 0, .5);background:rgba(0, 0, 0, .1);outline: none;padding:.15em .5em; }
+.register-text-input:hover { position:relative;background:rgba(0, 0, 0, .2);border-color:rgba(0, 0, 0, .6); }
+.register-text-input:focus { position:relative;background:rgba(0, 0, 0, .3);border-color:rgba(0, 0, 0, .7); }
+.register-firstname-input { width:50%; border-radius: 2px 0 0 0; }
+.register-lastname-input { width:calc(50% + 1px); margin-left: -1px;border-radius: 0 2px 0 0; }
+.register-email-input { position: relative;border-radius: 0 0 2px 2px; }
+.register-password-input { position: relative;border-radius: 2px 2px 0 0; }
+.register-password2-input { position: relative;border-radius: 0 0 2px 2px; }
+
+.register-submit-input { position: relative;width:100%;border-radius: 2px;border:1px solid rgba(0, 0, 0, .5);background:rgba(0, 0, 0, .1);outline: none;padding:.15em .5em;color:black;border-bottom-width: 2px;cursor: pointer;-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none; }
+.register-submit-input:hover { background: rgba(0, 0, 0, .2);border-color: rgba(0, 0, 0, .6); }
+.register-submit-input:active { background: rgba(0, 0, 0, .3);border-color: rgba(0, 0, 0, .7); }
+
+.poke-upload-button { position: relative;width:100%;border-radius: 2px;border:1px solid rgba(0, 0, 0, .5);background:rgba(0, 0, 0, .1);outline: none;padding:.15em .5em;color:black;border-bottom-width: 2px;cursor: pointer;-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none; text-align: center; }
+.poke-upload-button:hover { background: rgba(0, 0, 0, .2);border-color: rgba(0, 0, 0, .6); }
+.poke-upload-button:active { background: rgba(0, 0, 0, .3);border-color: rgba(0, 0, 0, .7); }
+
+.register-top-level-controls-wrapper { position: absolute;display: block;height:100%;width:100%; z-index: 15; top:0;left:0;pointer-events: none; }
+.register-top-level-control-aligner { position: relative;height:100%;width:100%; }
+
+.poke-done-button { position: relative;width:100%;border-radius: 2px;border:1px solid rgba(0, 0, 0, .5);background:rgba(0, 0, 0, .1);outline: none;padding:.15em .5em;color:black;border-bottom-width: 2px;cursor: pointer;-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none; text-align: center;pointer-events: all; }
+.poke-done-button:hover { background: rgba(0, 0, 0, .2);border-color: rgba(0, 0, 0, .6); }
+.poke-done-button:active { background: rgba(0, 0, 0, .3);border-color: rgba(0, 0, 0, .7); }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.reactEasyCrop_Container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    user-select: none;
+    touch-action: none;
+    cursor: move;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 4;
+}
+
+.reactEasyCrop_Image,
+.reactEasyCrop_Video {
+    will-change: transform; /* this improves performances and prevent painting issues on iOS Chrome */
+}
+
+.reactEasyCrop_Contain {
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.reactEasyCrop_Cover_Horizontal {
+    width: 100%;
+    height: auto;
+}
+.reactEasyCrop_Cover_Vertical {
+    width: auto;
+    height: 100%;
+}
+
+.reactEasyCrop_CropArea {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-sizing: border-box;
+    box-shadow: 0 0 0 9999em;
+    color: rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+.reactEasyCrop_CropAreaRound {
+    border-radius: 50%;
+}
+
+.reactEasyCrop_CropAreaGrid::before {
+    content: ' ';
+    box-sizing: border-box;
+    position: absolute;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    top: 0;
+    bottom: 0;
+    left: 33.33%;
+    right: 33.33%;
+    border-top: 0;
+    border-bottom: 0;
+}
+
+.reactEasyCrop_CropAreaGrid::after {
+    content: ' ';
+    box-sizing: border-box;
+    position: absolute;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    top: 33.33%;
+    bottom: 33.33%;
+    left: 0;
+    right: 0;
+    border-left: 0;
+    border-right: 0;
+}
