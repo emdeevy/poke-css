@@ -47,7 +47,7 @@
 
 .register-invisible-input-wrapper { position: absolute;visibility: hidden; }
 
-.register-text-input { position: relative;width:100%;border-radius: 2px;border:1px solid rgba(0, 0, 0, .5);background:rgba(0, 0, 0, .1);outline: none;padding:.15em .5em; }
+.register-text-input { position: relative;width:100%;border-radius: 2px;border:1px solid rgba(0, 0, 0, .5);background:rgba(0, 0, 0, .1);outline: none;padding:.15em .5em;z-index: 1; }
 .register-text-input:hover { position:relative;background:rgba(0, 0, 0, .2);border-color:rgba(0, 0, 0, .6); }
 .register-text-input:focus { position:relative;background:rgba(0, 0, 0, .3);border-color:rgba(0, 0, 0, .7); }
 .register-firstname-input { width:50%; border-radius: 2px 0 0 0; }
@@ -71,7 +71,7 @@
 .poke-done-button:hover { background: rgba(0, 0, 0, .2);border-color: rgba(0, 0, 0, .6); }
 .poke-done-button:active { background: rgba(0, 0, 0, .3);border-color: rgba(0, 0, 0, .7); }
 
-
+.red-input { position:relative;z-index:2;border-color: #b21f2d!important; }
 
 
 
